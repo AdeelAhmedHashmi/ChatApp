@@ -1,0 +1,3 @@
+{
+    "exec": "tsx --watch src/server.ts"
+}

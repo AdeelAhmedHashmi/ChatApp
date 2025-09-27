@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: all;
+}
+
+body {
+  @apply m-0 p-0;
+}
+
+@plugin "daisyui/theme" {
+  name: "chatapp";
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
+
+  /* === Backgrounds === */
+  --color-base-100: oklch(
+    97% 0.01 160
+  ); /* chat background - slightly warm off-white */
+  --color-base-200: oklch(
+    94% 0.015 160
+  ); /* message bubble background (other person) */
+  --color-base-300: oklch(90% 0.02 160); /* input box background */
+  --color-base-content: oklch(20% 0.03 160); /* default text color */
+
+  /* === Primary Colors (main brand color like WhatsApp green but softer) === */
+  --color-primary: oklch(65% 0.23 150); /* fresh green (WhatsApp-inspired) */
+  --color-primary-content: oklch(98% 0.01 150); /* text on green (white) */
+
+  /* === Secondary Colors (headers, UI accents) === */
+  --color-secondary: oklch(50% 0.02 160); /* muted gray-green for top bar */
+  --color-secondary-content: oklch(97% 0.01 160); /* text on top bar */
+
+  /* === Accent (for highlights, unread badges) === */
+  --color-accent: oklch(75% 0.25 100); /* bright green-yellow highlight */
+  --color-accent-content: oklch(15% 0.03 100); /* text on accent */
+
+  /* === Status Colors (info, success, warning, error) === */
+  --color-info: oklch(75% 0.15 230); /* light blue (links, info banners) */
+  --color-info-content: oklch(15% 0.03 230);
+
+  --color-success: oklch(70% 0.25 150); /* green checkmarks, confirmations */
+  --color-success-content: oklch(98% 0.01 150);
+
+  --color-warning: oklch(80% 0.2 80); /* yellow (low contrast warning) */
+  --color-warning-content: oklch(25% 0.05 80);
+
+  --color-error: oklch(60% 0.3 30); /* red (error messages) */
+  --color-error-content: oklch(98% 0.01 30);
+
+  /* === Radius (round chat bubbles) === */
+  --radius-selector: 1.25rem; /* big rounded chat bubbles */
+  --radius-field: 0.5rem; /* inputs slightly rounded */
+  --radius-box: 1rem; /* containers rounded */
+
+  /* === Sizing === */
+  --size-selector: 0.5rem;
+  --size-field: 0.5rem;
+
+  /* === Borders & Effects === */
+  --border: 1px;
+  --depth: 0.5; /* softer shadows */
+  --noise: 0; /* clean, modern look */
+}
